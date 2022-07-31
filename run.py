@@ -27,7 +27,7 @@ def main():
     except ValueError:
         print("Invalid value. You must type a numeric value")
 
-    print("Calculating your bmr rounded to the clostest int...\n ")
+    print("Calculating your bmr, rounded to the closest int...\n ")
 
     if gender == 1:
         bmr = round(88.362 + weight_men_bmr(weight) + height_men_bmr(height) - age_men_bmr(age))
