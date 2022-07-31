@@ -1,3 +1,7 @@
+from weight import weight_men_bmr
+from weight import weight_women_bmr
+
+
 def main():
     """
     This is the main function that calculates the bmr
