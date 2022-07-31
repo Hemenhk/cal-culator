@@ -15,3 +15,4 @@ def main():
         print(f"you weigh {weight} kg\n")
 
         print("if you are male enter '1', if you are female enter any other value: \n ")
+        gender = int(input("What is your gender?:\n "))
