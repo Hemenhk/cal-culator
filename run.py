@@ -10,3 +10,5 @@ def main():
 
         height = float(input("what's your height in cm?:\n "))
         print(f"you are {height} cm tall\n")
+
+        weight = float(input("what's your weight in kg?:\n"))
