@@ -17,3 +17,4 @@ def main():
         print("if you are male enter '1', if you are female enter any other value: \n ")
         gender = int(input("What is your gender?:\n "))
     except ValueError:
+        print("Invalid value. You must type a numeric value")
