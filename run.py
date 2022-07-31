@@ -6,3 +6,4 @@ def main():
 
     try:
         age = float(input("what's your age in years?:\n "))
+        print(f"you are {age} years old\n")
