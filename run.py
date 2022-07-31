@@ -26,3 +26,5 @@ def main():
         gender = int(input("What is your gender?:\n "))
     except ValueError:
         print("Invalid value. You must type a numeric value")
+
+    print("Calculating your bmr rounded to the clostest int...\n ")
