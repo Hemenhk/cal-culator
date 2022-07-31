@@ -36,3 +36,5 @@ def main():
     print(f"Your bmr is {bmr}\n ")
 
     print("Calculation finished.")
+
+main()
