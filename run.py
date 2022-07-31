@@ -9,3 +9,4 @@ def main():
         print(f"you are {age} years old\n")
 
         height = float(input("what's your height in cm?:\n "))
+        print(f"you are {height} cm tall\n")
