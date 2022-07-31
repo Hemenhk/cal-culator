@@ -34,3 +34,5 @@ def main():
     else:
          bmr = round(447.593 + weight_women_bmr(weight) + height_women_bmr(height) - age_women_bmr(age))
     print(f"Your bmr is {bmr}\n ")
+
+    print("Calculation finished.")
