@@ -13,3 +13,5 @@ def main():
 
         weight = float(input("what's your weight in kg?:\n"))
         print(f"you weigh {weight} kg\n")
+
+        print("if you are male enter '1', if you are female enter any other value: \n ")
