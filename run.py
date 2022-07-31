@@ -31,3 +31,5 @@ def main():
 
     if gender == 1:
         bmr = round(88.362 + weight_men_bmr(weight) + height_men_bmr(height) - age_men_bmr(age))
+    else:
+         bmr = round(447.593 + weight_women_bmr(weight) + height_women_bmr(height) - age_women_bmr(age))
