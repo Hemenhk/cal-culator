@@ -1,3 +1,5 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+def main():
+   """
+    This is the main function that calculates the bmr
+    of either a male or female user. 
+    """
