@@ -12,3 +12,4 @@ def main():
         print(f"you are {height} cm tall\n")
 
         weight = float(input("what's your weight in kg?:\n"))
+        print(f"you weigh {weight} kg\n")
