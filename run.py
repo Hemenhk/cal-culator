@@ -1,9 +1,6 @@
-from weight import weight_men_bmr
-from weight import weight_women_bmr
-from height import height_men_bmr
-from height import height_women_bmr
-from age import age_men_bmr
-from age import age_women_bmr
+from weight import weight_men_bmr, weight_women_bmr
+from height import height_men_bmr, height_women_bmr
+from age import age_men_bmr, age_women_bmr
 
 
 def main():
