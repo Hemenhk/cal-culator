@@ -57,3 +57,7 @@ CalCulator consists of four different inputs, where the user enters some persona
 11. Click "deploy".
 12. Once it has been deployed, your app is runnable by clicking "Open app". 
 
+### Credits
+
+- Code Institute
+- Heroku
