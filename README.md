@@ -61,3 +61,4 @@ CalCulator consists of four different inputs, where the user enters some persona
 
 - Code Institute
 - Heroku
+- [garnethealth](https://www.garnethealth.org/news/basal-metabolic-rate-calculator). This is the website from which the BMR formula was acquired.

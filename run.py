@@ -43,4 +43,5 @@ If you are female enter any other numeric value: \n """)
 
     print("Calculation finished.")
 
+
 main()
