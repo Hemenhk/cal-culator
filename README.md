@@ -36,3 +36,6 @@ CalCulator consists of four different inputs, where the user enters some persona
 
 - Manually tested the code and no bugs were found.
 
+### Validator Testing
+
+- The code was passed through [Pep8online](http://pep8online.com/), with only two errors. These were found on lines 39 and 41, as they were too long. However, due to the fact that these are equations, there is no suitable reason to shorten them.
