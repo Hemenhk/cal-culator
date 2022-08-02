@@ -25,3 +25,14 @@ CalCulator consists of four different inputs, where the user enters some persona
 
 - Finally the computer generates the user's basal metabolic rate. In the example above, a 25 yeard old male, standing at 181 cm tall and weighing 94 kg, has a bmr of 2074 calories.
 - With this information the user is able to determine how many calories they need to consume to either gain or lose weight, depending on their goal.
+
+
+### Technologies Used
+
+- [Python](https://www.python.org/)
+- [Heroku](https://www.heroku.com/)
+
+### Testing
+
+- Manually tested the code and no bugs were found.
+
