@@ -15,6 +15,20 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('user_bmr')
 
 
+def input_with_validation(input_message):
+    value = None
+    valid_input = False
+    while not valid_input:
+        input_value = input(input_message)
+        try:
+            value = int(input_value)
+            valid_input = True
+        except ValueError:
+            print("Invalid value. You must type a numeric value")
+            valid_input = False
+    return value
+
+
 def main():
     """
     This is the main function that calculates the BMR
@@ -36,25 +50,22 @@ of which to store your results in a Google Spreadsheet.\n""")
     print("All values entered must be numeric values such as '1', '72' '23'\n")
 
     user_list = []
-    try:
-        age_input = float(input("What's your age in years?:\n "))
-        print(f"\nYou are {age_input} years old\n")
-        user_list.append(age_input)
 
-        height_input = float(input("What's your height in cm?:\n "))
-        print(f"\nYou are {height_input} cm tall\n")
-        user_list.append(height_input)
+    age_input = input_with_validation("What's your age in years?: ")
+    print(f"\nYou are {age_input} years old\n")
+    user_list.append(age_input)
 
-        weight_input = float(input("What's your weight in kg?:\n"))
-        print(f"\nYou weigh {weight_input} kg\n")
-        user_list.append(weight_input)
+    height_input = input_with_validation("What's your height in cm?: ")
+    print(f"\nYou are {height_input} cm tall\n")
+    user_list.append(height_input)
 
-        print("""If you are male enter '1'.
+    weight_input = input_with_validation("What's your weight in kg?: ")
+    print(f"\nYou weigh {weight_input} kg\n")
+    user_list.append(weight_input)
+
+    print("""If you are male enter '1'.
 If you are female enter any other numeric value: \n """)
-        gender = int(input("What is your gender?:\n "))
-    except ValueError:
-        print("Invalid value. You must type a numeric value")
-
+    gender = input_with_validation("What is your gender?: ")
     print("\nCalculating your BMR, rounded to the closest int...\n ")
 
     if gender == 1:
