@@ -19,7 +19,6 @@ def main():
     """
     This is the main function that calculates the BMR
     of either a male or a female user.
-
     At the end of the function a list will be generated
     which will then be uploaded and stored in a Google
     spreadsheet
@@ -31,7 +30,6 @@ def main():
 By typing in personal values of your height, age, weight and gender,
 we will calculate your BMR so that you can either increase your calories
 to build muscle, or to decrease your calories to burn fat.
-
 In the end you'll be given a list,
 of which to store your results in a Google Spreadsheet.\n""")
 
