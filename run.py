@@ -71,7 +71,10 @@ of which to store your results in a Google Spreadsheet.\n""")
 
     user_list = []
 
-    age_input = input_with_validation("What's your age in years?: ",
+    name = input("What's your name?: ")
+    user_list.append(name)
+
+    age_input = input_with_validation("\nWhat's your age in years?: ",
                                       lambda x: 0 < x <= 120,
                                       "The value must be between [1..120]")
     print(f"\nYou are {age_input} years old\n")
