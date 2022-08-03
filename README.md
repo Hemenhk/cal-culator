@@ -1,64 +1,61 @@
-# CalCulator
+# CalCulator 
 
-This is an app that calculates the basal metabolic rate (BMR), which is caloric expenditure that a person's body burns when only doing basal tasks. 
+[View the published application on Heroku](https://cal-culators.herokuapp.com/)
 
-This is a simplistic calculation that takes a few different variables: height, weight and age of the user, and then calculates their BMR. 
+[View Google Sheets used for the project](https://docs.google.com/spreadsheets/d/1Em1IxjtKPEYA8Kc-0m8CRgSNmk6oF-ZLwpCXgDp_-kU/edit#gid=0)
 
-[Live Version Of The App](https://cal-culators.herokuapp.com/)
+![Image from Am I Responsive](readme-img/start-calc.png)
 
-## How to use
+## Project Overview
 
-CalCulator consists of four different inputs, where the user enters some personal data which will be used to calculate their BMR. The data is age in years, weight in kilograms, height in centimetres and their gender (male or female).
+CalCulator is a terminal based app that allows the user to calculate their Basal Metabolic Rate, or BMR. This has been created as part of my Project 3 for Code Institute.
 
-## Features
+## Table of Contents
 
-![feature.1](readme-img/start-calc.png)
+1. [Strategy](#strategy)
+    * [Project Goals](#project-goals)
+    * [User Intention](#user-intention)
+    * [Scope](#scope)
+    * [Design]
+    * [Skeleton]
+        * [Flowchart]
+2. [Features]
+    * [Current Features]
+    * [Future Features]
+3. [Technologies Uses]
+4. [Testing]
+    * [Validation Testing]
+    * [Known Bugs and Fixes]
+5. [Deployment]
+6. [Credits]
 
-- Prints a message welcoming the user to the app, and giving quick instructions.
-- The computer automatically starts asking the user to enter their information to use for the calculation.
+## Strategy <a name="strategy"></a>
 
-![feature.2](readme-img/enter-variables.png)
+### Project Goals <a name="project-goals"></a>
 
-- The user is asked to enter their gender, which is necessary to determine their basal metabolic rate.
+The goal of CalCulator is to provide a terminal-based app that allows the user to close to accuratley calculate their Basal Metabolic Rate (BMR), so that they would have an estimation of how many calories they need to consume to either gain weight or to lose weight. The result from the calculation will then be exported onto a Google Sheet, so that the user can store their data, and track their progress any time they decide to use the application.
 
-![feature.3](readme-img/end-calc.png)
+The target audience of this app is anyone that wants to get into fitness and not over- or under eat, to get their desired results. 
 
-- Finally the computer generates the user's basal metabolic rate. In the example above, a 25 yeard old male, standing at 181 cm tall and weighing 94 kg, has a bmr of 2074 calories.
-- With this information the user is able to determine how many calories they need to consume to either gain or lose weight, depending on their goal.
+### User Intention <a name="user-intention"></a>
 
+* __App User Goals:__
 
-### Technologies Used
+    * I want to get an estimation of my BMR.
+    * I want to be able to store my results in a Google Sheet so that I can access it anytime to update my calculation
 
-- [Python](https://www.python.org/)
-- [Heroku](https://www.heroku.com/)
+* __App Owner Goals:__
 
-### Testing
+    * I want to provide an app for the general public that calculates a user's BMR.
+    * I want provide the user a way to store their results in a Google Sheet so that they may update their results depending on their active goals. 
 
-- Manually tested the code and no bugs were found.
+## Scope <a name="scope"></a>
 
-### Validator Testing
+To achieve the goals set for this project, I will implement the following features:
 
-- The code was passed through [Pep8online](http://pep8online.com/), with only two errors. These were found on lines 39 and 41, as they were too long. However, due to the fact that these are equations, there is no suitable reason to shorten them.
+* A function that will take the user's age and create a formula that will be implemented differently depending on the user's gender
+* A function that will take the user's height and create a formula that will be implemented differently depending on the user's gender
+* A function that will take the user's weight and create a formula that will be implemented differently depending on the user's gender
+* An if statement that will execute two different calculations depending on the gender which the user selected.
+* A function that will export the variables entered by the user and their results, and export them onto a Google Sheet.
 
-### Deployment
-
-- Deploying the project to [Heroku](https://dashboard.heroku.com/)
-
-1. Go to Gitpod CLI and create a "requirements" file by typing "pip freeze --local > requirements.txt" in the root directory.
-2. Then, create the "Procfile" by typing "echo web: python app.py > Procfile" into the CLI root directory.
-3. Open the "Procfile" and type in "web: python3 app.py", and delete any blank lines at the bottom, then save this file. 
-4. Add, commit and push these files to Github.
-5. Next, go to Heroku and create your account.
-6. When logged in, click on "create new app", then select the region which is closest to your actual location, as there are only two options available: "North America" and "Europe".
-7. Select "Github" as your deployment method, and within the profile enter the name of your repository which is to be deployed and click "search".
-8. When Heroku has found the repository, click to connect the app. 
-9. Go to the "settings" tab and click on "Add buildpack". Here, add python and nodejs, then save. 
-10. Next, click on "Reveal Config Vars" and in the "KEY" tab, type "PORT". In the "Value" tab, type "8000", then add.
-11. Click "deploy".
-12. Once it has been deployed, your app is runnable by clicking "Open app". 
-
-### Credits
-
-- Code Institute
-- Heroku
-- [garnethealth](https://www.garnethealth.org/news/basal-metabolic-rate-calculator). This is the website from which the BMR formula was acquired.
