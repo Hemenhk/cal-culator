@@ -186,7 +186,7 @@ The app has also been used on different devices, such as:
 
 ### Known Bugs and Fixes <a name="bugs-fix"></a>
 
-* When testing the app in it's final form I noticed an issue regarding the bmr calculation. The calculation would provide the user with both the male and female BMR. To solve this, I had to create an if statement that would take the user's gender input and execute the calculation depending on wether the input entered was '1' or any other numeric value.
+* When testing the app in it's final form I noticed an issue regarding the bmr calculation. The calculation would provide the user with both the male and female BMR. To solve this, I had to create an if statement that would take the user's gender input and execute the calculation depending on wether the input entered was '1' for male or '2' for female.
 
 ## Deployment <a name="deployment"></a>
 
