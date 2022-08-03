@@ -80,7 +80,15 @@ This flowchart was created using [diagrams.net](https://www.diagrams.net/)
 
 __Main__:
 
-The main() function's purpose is to store all other functions which are executed in order, for the app. Once this function has finished running, the app is ended, and the user is presented with a message, thanking them for their usage. The code that exports and stores the results in a Google Sheet can be found in this function, close to the bottom.
+The main() function's purpose is to store all other functions which are executed in order, for the app. Once this function has finished running, the app is ended, and the user is presented with a message, thanking them for their usage. 
+
+__input_with_validation__:
+
+The input_with_validation() function creates input messages for the user, which is then converted into an interger, so that the print message does not display a float number. The error message is executed if the user enters a value which is lower or exceeds the acceptable parameter that has been set, or if an invalid value has been entered, such as a string or a float. 
+
+__add_row_to_spreadsheet__:
+
+The add_row_to_spreadsheet() function contains the codes which will export and store the user's result and entered variables into a Google Sheet. It also contains print messages which are in place to notify the user that the application is still running.
 
 __Age Variable__:
 

@@ -40,7 +40,7 @@ def input_with_validation(input_message, validation_rule=None,
 
 
 def add_row_to_spreadsheet(row):
-    """ Add result to the Google Spreadsheet
+    """ Add result and variables to the Google Spreadsheet
     """
     # These lines of code are credited to Anna Greaves' Love Sandwiches
     print("Updating bmr_outpt worksheet...\n")
