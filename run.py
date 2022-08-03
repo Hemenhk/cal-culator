@@ -15,18 +15,38 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('user_bmr')
 
 
-def input_with_validation(input_message):
+def input_with_validation(input_message, validation_rule=None,
+                          error_message="Please enter a valid value"):
+    """
+    Input value from standard input and validates that
+    the value is a valid integer value.
+    """
     value = None
     valid_input = False
     while not valid_input:
         input_value = input(input_message)
         try:
             value = int(input_value)
-            valid_input = True
+            if validation_rule is not None:
+                valid_input = validation_rule(value)
+                if not valid_input:
+                    print(f"{error_message}\n")
+            else:
+                valid_input = True
         except ValueError:
             print("Invalid value. You must type a numeric value")
             valid_input = False
     return value
+
+
+def add_row_to_spreadsheet(row):
+    """ Add result to the Google Spreadsheet
+    """
+    # These lines of code are credited to Anna Greaves' Love Sandwiches
+    print("Updating bmr_outpt worksheet...\n")
+    bmr_outpt_worksheet = SHEET.worksheet("bmr_outpt")
+    bmr_outpt_worksheet.append_row(row)
+    print("Bmr_outpt worksheet updated successfully.\n")
 
 
 def main():
@@ -51,22 +71,28 @@ of which to store your results in a Google Spreadsheet.\n""")
 
     user_list = []
 
-    age_input = input_with_validation("What's your age in years?: ")
+    age_input = input_with_validation("What's your age in years?: ",
+                                      lambda x: 0 < x <= 120,
+                                      "The value must be between [1..120]")
     print(f"\nYou are {age_input} years old\n")
     user_list.append(age_input)
 
-    height_input = input_with_validation("What's your height in cm?: ")
+    height_input = input_with_validation("What's your height in cm?: ",
+                                         lambda x: 0 < x <= 250,
+                                         "The value must be between [1..250]")
     print(f"\nYou are {height_input} cm tall\n")
     user_list.append(height_input)
 
-    weight_input = input_with_validation("What's your weight in kg?: ")
+    weight_input = input_with_validation("What's your weight in kg?: ",
+                                         lambda x: 0 < x <= 300,
+                                         "The value must be between [1..300]")
     print(f"\nYou weigh {weight_input} kg\n")
     user_list.append(weight_input)
 
-    print("""If you are male enter '1'.
-If you are female enter any other numeric value: \n """)
-    gender = input_with_validation("What is your gender?: ")
-    print("\nCalculating your BMR, rounded to the closest int...\n ")
+    gender = input_with_validation(
+        "Gender: enter '1' for male or '2' for female: ",
+        lambda x: x in [1, 2])
+    print("\nCalculating your BMR, rounded to the closest int...\n")
 
     if gender == 1:
         bmr = round(88.362 + weight.weight_men_bmr(weight_input) +
@@ -82,18 +108,7 @@ If you are female enter any other numeric value: \n """)
     print(user_list)
     print("\nCalculation finished.\n")
 
-    """
-    These four lines of code (line 77-80) are used
-    to update the worksheet.
-    """
-
-    # These lines of code are credited to Anna Greaves' Love Sandwiches
-    print("Updating bmr_outpt worksheet...\n")
-    bmr_outpt_worksheet = SHEET.worksheet("bmr_outpt")
-    bmr_outpt_worksheet.append_row(user_list)
-    print("Bmr_outpt worksheet updated successfully.\n")
-
-    return bmr
+    add_row_to_spreadsheet(user_list)
 
 
 main()
