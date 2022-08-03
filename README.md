@@ -84,7 +84,7 @@ The main() function's purpose is to store all other functions which are executed
 
 __input_with_validation__:
 
-The input_with_validation() function creates input messages for the user, which is then converted into an interger, so that the print message does not display a float number. The error message is executed if the user enters a value which is lower or exceeds the acceptable parameter that has been set, or if an invalid value has been entered, such as a string or a float. 
+The input_with_validation() function creates input fields for the user, which is then converted into an interger, so that the print message does not display a float number. The error message is executed if the user enters a value which is lower or exceeds the acceptable parameter that has been set, or if an invalid value has been entered, such as a string or a float. 
 
 __add_row_to_spreadsheet__:
 
