@@ -34,9 +34,9 @@ CalCulator is a terminal based app that allows the user to calculate their Basal
 
 ### Project Goals <a name="project-goals"></a>
 
-The goal of CalCulator is to provide a terminal-based app that allows the user to close to accuratley calculate their Basal Metabolic Rate (BMR), so that they would have an estimation of how many calories they need to consume to either gain weight or to lose weight. The result from the calculation will then be exported onto a Google Sheet, so that the user can store their data, and track their progress any time they decide to use the application.
+The goal of CalCulator is to provide a terminal-based app that allows the user to as close to accurately calculate their Basal Metabolic Rate (BMR), so that they would have an estimation of how many calories they need to consume to either gain weight or to lose weight. The result from the calculation will then be exported onto a Google Sheet, so that the user can store their data, and track their progress any time they decide to use the application.
 
-The target audience of this app is anyone that wants to get into fitness and not over- or under eat, to get their desired results. 
+The target audience of this app is anyone that wants to get into fitness and not over- or under eat, so as to get their desired results. 
 
 ### User Intention <a name="user-intention"></a>
 
@@ -80,7 +80,7 @@ This flowchart was created using [diagrams.net](https://www.diagrams.net/)
 
 __Main__:
 
-The main() function's purpose is where all other functions are executed in order, for the app. Once this function has finished running, the app is ended, and the user is presented with a message, thanking them for their usage. The code that exports and stores the results in a Google Sheet can be found in this function, close to the bottom.
+The main() function's purpose is to store all other functions which are executed in order, for the app. Once this function has finished running, the app is ended, and the user is presented with a message, thanking them for their usage. The code that exports and stores the results in a Google Sheet can be found in this function, close to the bottom.
 
 __Age Variable__:
 
