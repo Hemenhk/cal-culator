@@ -187,7 +187,6 @@ The app has also been used on different devices, such as:
 ### Known Bugs and Fixes <a name="bugs-fix"></a>
 
 * When testing the app in it's final form I noticed an issue regarding the bmr calculation. The calculation would provide the user with both the male and female BMR. To solve this, I had to create an if statement that would take the user's gender input and execute the calculation depending on wether the input entered was '1' or any other numeric value.
-* Another issue was regarding the export of the results and variables to the Google Sheet. I could not create a seperate function updating the Google Sheet, as the 'user_list' variable was local to the main() function, and could not be accessed by a different function. Therefore, I had to solve this issue by typing the code inside the main() function, close to the bottom.
 
 ## Deployment <a name="deployment"></a>
 
